@@ -1,0 +1,64 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets Clone</title>
+    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <i class="fa fa-table fa-3x" aria-hidden="true"></i>
+        <h1>Google Sheets Clone</h1>
+    </header>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <button onclick="formatText('bold')">Bold</button>
+        <button onclick="formatText('italic')">Italic</button>
+        <button onclick="formatText('highlight')">Highlight</button>
+        <button onclick="addRow()">+ Row</button>
+        <button onclick="addColumn()">+ Column</button>
+    </div>
+
+    <!-- Formula Bar -->
+    <div class="formula-bar">
+        <label for="formula">Formula:</label>
+        <input type="text" id="formula" placeholder="Enter formula (e.g., =SUM(A1:A3))">
+    </div>
+
+    <!-- Spreadsheet Table -->
+    <div class="spreadsheet-container">
+        <table id="spreadsheet">
+            <thead>
+                <tr>
+                    <th></th> <!-- Top-left corner blank -->
+                    <th>A</th> <th>B</th> <th>C</th> <th>D</th> <th>E</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
