@@ -1,10 +1,10 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Sheets Clone</title>
-    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -17,17 +17,20 @@
 
     <!-- Toolbar -->
     <div class="toolbar">
-        <button onclick="formatText('bold')">Bold</button>
-        <button onclick="formatText('italic')">Italic</button>
-        <button onclick="formatText('highlight')">Highlight</button>
-        <button onclick="addRow()">+ Row</button>
-        <button onclick="addColumn()">+ Column</button>
+        <button id="bold-btn">Bold</button>
+        <button id="italic-btn">Italic</button>
+        <button id="highlight-btn">Highlight</button>
+        <button id="add-row">+ Row</button>
+        <button id="add-col">+ Column</button>
+        <button id="delete-row">- Row</button>
+        <button id="delete-col">- Column</button>
     </div>
 
     <!-- Formula Bar -->
     <div class="formula-bar">
-        <label for="formula">Formula:</label>
-        <input type="text" id="formula" placeholder="Enter formula (e.g., =SUM(A1:A3))">
+        <label for="formula-input">Formula:</label>
+        <input type="text" id="formula-input" placeholder="Enter formula (e.g., =SUM(A1:A3))">
+        <button id="apply-formula">Apply Formula</button>
     </div>
 
     <!-- Spreadsheet Table -->
@@ -60,5 +63,7 @@
         </table>
     </div>
 
+    <script src="js/formulas.js" defer></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
